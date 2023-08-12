@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main entry 
  *
  * Description:true or false validation
  *
