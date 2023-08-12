@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
- * Main-entry point
+ * main - entry point
  *
  * Description:true or false validation
  *
