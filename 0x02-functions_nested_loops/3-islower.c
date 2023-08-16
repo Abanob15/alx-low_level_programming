@@ -1,12 +1,13 @@
 #include"main.h"
 
 /**
- * _islower - function to check if character in lowercase
+ * _islower - function to check if
+ *		character is lowercase
  *
  * @c: checks input of function
  *
- * Ruturn: returns 1 if `c` is lowercase otherwise
- * alwaysa 0 (Success)
+ * Return: returns 1 if `c` is lowercase
+ * otherwise always 0 (Success)
 */
 
 int _islower(int c)
