@@ -16,19 +16,19 @@ void time_table(void)
 	for (num = 0; num <= 9; num++)
 	{
 		_putchar(48);
-		for  (mult = 1; mlut <= 9; mult++)
+		for  (mult = 1; mult <= 9; mult++)
 		{
 			_putchar(',');
 			_putchar(' ');
 
-			_prod = num * mult;
+			prod = num * mult;
 
 			/*
 			 * put space if product is a single number
 			 * place the frist digit if its two numbers
 			*/
 			if (prod <= 9)
-				_putchar(' ')
+				_putchar(' ');
 			else
 				_putchar((prod / 10) + 48); /*get the frist digit*/
 
