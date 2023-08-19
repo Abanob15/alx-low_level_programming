@@ -1,30 +1,34 @@
 #include "main.h"
 
 /**
- * print_triangle - prints a triangle
+ * print_triangle - entry point
+ *
+ * Description: Prints diagonals
  *
  * @size: size of the triangle
  *
  * Return: void
-*/
+ */
 
 void print_triangle(int size)
 {
-	int x, y;
+	int x, y, z;
 
 	if (size <= 0)
 	{
 		_putchar('\n');
+	}
 	else
 	{
 		for (x = 1; x <= size; x++)
 		{
-			for (y = 1; y <= row; y++)
+			for (z = size - x; z >= 1; z--)
 			{
-				if ((x + y) <= size)
-					_putchar(' ');
-				else
-					_putchar('#');
+				_putchar(' ');
+			}
+			for (y = 1; y <= x; y++)
+			{
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
