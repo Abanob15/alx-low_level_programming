@@ -11,12 +11,18 @@
 
 void print_square(int size)
 {
-	int length, hight;
+	int lenght, hight;
 
-	for (length = 1; length <= size; length++)
+	if (size <= 0)
+		_putchar('\n');
+
+	for (lenght = 0; lenght < size; lenght++)
 	{
-		for (hight = 1; hight <= size; hight++)
+		for (hight = 0; hight < (size); hight++)
+		{
 			_putchar('#');
+		}
 		_putchar('\n');
 	}
+
 }
