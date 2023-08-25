@@ -6,7 +6,7 @@
  * @s: string to modify
  *
  * Return: pointer to dest
- */
+*/
 
 char *cap_string(char *s)
 {
