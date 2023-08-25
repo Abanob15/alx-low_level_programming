@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * *_strncpy - a function that compares two strings
+ * *_strcmp - a function that compares two strings
  *
- * @dest: destination
- * @src: source
+ * @s1: 1st string
+ * @s2: 2nd string
  *
  * Return: 0 if s1 and s2 are equals
  * another number if not
