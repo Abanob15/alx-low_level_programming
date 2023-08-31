@@ -12,22 +12,29 @@
 
 int _sqrt(int prev, int root)
 {
-	if (a * a == b)
-		return (a);
-	if (a * a > b)
+	if (prev > root)
+	{
 		return (-1);
-	return (check(a + 1, b));
+	}
+	else if (prev * prev == root)
+	{
+		return (prev);
+	}
+
+	return (_sqrt(prev + 1, root));
 }
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: integer to find sqrt of
- * Return: natural square root or -1
-*/
-
+ * _sqrt_recursion - recursive square root of a number
+ * @n: the integer
+ * Return: square root
+ */
 int _sqrt_recursion(int n)
 {
-	if (n == 0)
-		return (0);
-	return (check(1, n));
+	if (n < 0)
+	{
+		return (-1);
+	}
+
+	return (_sqrt(1, n));
 }
