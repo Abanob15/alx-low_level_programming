@@ -1,44 +1,34 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * str_checker - check if two strings are identical
+ * check - checks to see if number is prime
  *
- * @s1: string_1 base address
+ * @a:integer
  *
- * @s2: string_2 base address
- *
- * @i: left index
- *
- * @j: special index
- *
- * Return: (1) if s is palindrome otherwise (0)
-*/
-
-int str_checker(char *s1, char *s2, int i, int j)
-{
-	if (s1[i] == '\0' && s2[j] == '\0')
-		return (1);
-	if (s1[i] == s2[j])
-		return (str_checker(s1, s2, i + 1, j + 1));
-	if (s1[i] == '\0' && s2[j] == '*')
-		return (str_checker(s1, s2, i, j + 1));
-	if (s2[j] == '*')
-		return (str_checker(s1, s2, i + 1, j) || str_checker(s1, s2, i, j + 1));
-	return (0);
-}
-
-/**
- * wildcmp - check if strings could be considered identical
- *
- * @s1: base address for string
- *
- * @s2: base address for string
+ * @b:integer
  *
  * Return: int
 */
 
-int wildcmp(char *s1, char *s2)
+int check(int a, int b)
 {
-	return (str_checker(s1, s2, 0, 0));
+	if (b < 2 || b % a == 0)
+		return (0);
+	else if (a > b / 2)
+		return (1);
+	else
+		return (check(a + 1, b));
+}
+
+/**
+ * is_prime_number - states if number is prime
+ * @n: integer
+ * Return: int
+ */
+
+int is_prime_number(int n)
+{
+	if (n == 2)
+		return (1);
+	return (check(2, n));
 }
