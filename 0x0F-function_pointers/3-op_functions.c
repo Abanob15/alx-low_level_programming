@@ -17,10 +17,10 @@ int op_add(int a, int b)
 /**
  * op_sub - returns difference of two numbers
  *
- * @a: int parameter
- * @b: int parameter
+ * @a: 1st int parameter
+ * @b: 2nd int parameter
  *
- * Return: the diffrance 
+ * Return: the diffrance
 */
 
 int op_sub(int a, int b)
