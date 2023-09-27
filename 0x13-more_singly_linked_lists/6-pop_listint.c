@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -6,7 +6,7 @@
  *
  * @head: a double pointer
  *
- *Return: (0) if linked list is empty
+ *Return: empty
 */
 
 int pop_listint(listint_t **head)
