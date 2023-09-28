@@ -5,7 +5,7 @@
  *
  * @b: pointing to a string of (0) and (1) chars
  *
- * Return: converted number or (0)
+ * Return: decimal format of the binary
 */
 
 unsigned int binary_to_uint(const char *b)
