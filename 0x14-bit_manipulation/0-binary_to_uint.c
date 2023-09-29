@@ -6,27 +6,26 @@
  *
  * @b: pointing to a string of (0) and (1) chars
  *
- * Return: converted number or (0)
+ * Return: decimal format of the binary
 */
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
-	unsigned int n;
+	unsigned int dec = 0; 
 
-	n = 0;
-	if (!b)
+	if (b == NULL)
 		return (0);
-	for (i = 0; b[i] != '\0'; i++)
+
+	while (*b)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (*b == '1')
+			dec = (dec << 1) | 1;
+		else if (*b == '0')
+			dec <<= 1;
+		else
 			return (0);
+		b++;
 	}
-	for (i = 0; b[i] != '\0'; i++)
-	{
-		n <<= 1;
-		if (b[i] == '1')
-			n += 1;
-	}
-	return (n);
+
+	return (dec);
 }
