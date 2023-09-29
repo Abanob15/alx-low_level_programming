@@ -14,17 +14,17 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int differnce, result;
-	unsigned int n, i;
+	unsigned int j, i;
 
-	u = 0;
+	j = 0;
 	result = 1;
 	differnce = n ^ m;
 	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
 		if (result == (differnce & result))
-			u++;
+			j++;
 		result <<= 1;
 	}
 
-	return (u);
+	return (j);
 }
